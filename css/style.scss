@@ -1,0 +1,355 @@
+@import "./flex";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.doinly {
+  @include flexBox(center, center);
+  height: 120vh;
+  //   margin: 0 auto;
+  
+
+  .left {
+    width: 50%;
+    height: auto;
+    // position: relative;
+    // background-color: yellow;
+
+    .background {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: -1;
+      // width: 100%;
+      // height: 60%;
+    }
+    h1 {
+      color: rgb(250, 248, 248);
+      margin-top: 1px;
+      margin-left: 25px;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 40px;
+    }
+    .tweeter {
+      width: 500px;
+      height: 30px;
+      margin-top: 40px;
+      margin-left: 100px;
+      border-radius: 50px;
+      background-color: white;
+      @include flexBox(center, center);
+      cursor: pointer;
+      p {
+        margin-left: 10px;
+      }
+      .tweet {
+        margin-left: 70px;
+      }
+    }
+
+    .linkedin {
+      width: 500px;
+      height: 30px;
+      margin-top: 15px;
+      margin-left: 100px;
+      border-radius: 50px;
+      background-color: white;
+      @include flexBox(center, center);
+      cursor: pointer;
+      p {
+        margin-left: 10px;
+      }
+      .linked {
+        margin-left: 70px;
+      }
+    }
+
+    .facebook {
+      width: 500px;
+      height: 30px;
+      margin-top: 15px;
+      margin-left: 100px;
+      border-radius: 50px;
+      background-color: white;
+      @include flexBox(center, center);
+      cursor: pointer;
+
+      p {
+        margin-left: 10px;
+      }
+      .face {
+        margin-left: 70px;
+      }
+    }
+  }
+  .right {
+    width: 50%;
+    height: auto;
+    //   position: relative;
+
+    .top_img {
+      // position: absolute;
+      margin-left: 700px;
+      width: 140px;
+      height: 146px;
+    }
+    h1 {
+      margin-top: 50px;
+      @include flexBox(center, center);
+    }
+    p {
+      margin-top: 10px;
+      padding-bottom: 30px;
+      @include flexBox(center, center);
+    }
+
+    .inputs {
+      @include flexBox(center, center);
+      flex-direction: column;
+      .input {
+        width: 300px;
+        height: 30px;
+        margin-bottom: 20px;
+        //   padding: 15px;
+        //   border: none;
+        //   background-color: rgba(3, 26, 58, 0.847);
+        //   border-bottom: 1px solid gray;
+
+        #name,
+        #email,
+        #password {
+          width: 400px;
+          height: 30px;
+          border: 1px solid #cacaca;
+          box-shadow: 2px 4px 6px rgba(79, 79, 79, 0.15);
+          border-radius: 2px;
+        }
+      }
+    }
+
+    .checkbox {
+      @include flexBox(center, center);
+      width: 400px;
+      margin-left: 280px;
+
+      .checkbtn {
+        // @include flexBox(center, center);
+        p {
+          color: rgb(95, 94, 94);
+          font-size: 14px;
+          padding-left: 10px;
+        }
+      }
+    }
+
+    .info_btn {
+      @include flexBox(center, center);
+      margin-top: 20px;
+      margin-left: 200px;
+      #send {
+        padding: 10px 220px;
+        background-color: #03a9f4;
+        color: white;
+        font-size: 16px;
+        font-weight: 400;
+        border-radius: 50px;
+        transition: 0.3s ease-in;
+        cursor: pointer;
+
+        &:hover {
+          background: none;
+          border: 2px solid #03a9f4;
+          color: #03a9f4;
+        }
+      }
+    }
+
+    .bottom_img {
+      // position: absolute;
+      margin-right: 700px;
+      margin-top: 200px;
+      width: 140px;
+      height: 146px;
+    }
+  }
+}
+
+// #doinly_login {
+//   // display: flex;
+//   //   margin: 0 auto;
+
+//   .left_log {
+//     width: 50%;
+//     height: auto;
+//     // background-color: green;
+//     img {
+//       position: absolute;
+//       left: 0px;
+//       top: 0px;
+//       z-index: -1;
+//       // width: 100%;
+//       // height: 60%;
+//     }
+//     h1 {
+//       color: white;
+//       margin: 25px;
+//       font-family: "Montserrat";
+//       font-style: normal;
+//       font-weight: 300;
+//       font-size: 40px;
+//     }
+//     .tweeter_log {
+//       width: 500px;
+//       height: 30px;
+//       margin-top: 300px;
+//       margin-left: 100px;
+//       border-radius: 50px;
+//       background-color: white;
+//       @include flexBox(center, center);
+//       position: absolute;
+//       left: 0px;
+//       top: 0px;
+//       z-index: -1;
+
+//       .tweet {
+//         margin-left: 150px;
+//         cursor: pointer;
+//       }
+//     }
+
+//     .linkedin_log {
+//       width: 500px;
+//       height: 30px;
+//       margin-top: 350px;
+//       margin-left: 100px;
+//       border-radius: 50px;
+//       background-color: white;
+//       @include flexBox(center, center);
+//       position: absolute;
+//       left: 0px;
+//       top: 0px;
+//       z-index: -1;
+//       cursor: pointer;
+
+//       .linked {
+//         margin-left: 150px;
+//       }
+//     }
+
+//     .facebook_log {
+//       width: 500px;
+//       height: 30px;
+//       margin-top: 400px;
+//       margin-left: 100px;
+//       border-radius: 50px;
+//       background-color: white;
+//       @include flexBox(center, center);
+//       position: absolute;
+//       left: 0px;
+//       top: 0px;
+//       z-index: -1;
+//       p {
+//         margin-left: 10px;
+//         cursor: pointer;
+//       }
+//       .face {
+//         margin-left: 150px;
+//       }
+//     }
+//   }
+//   .right_log {
+//     width: 50%;
+//     height: auto;
+//     //   position: relative;
+
+//     .top_img {
+//       // position: absolute;
+//       margin-left: 700px;
+//       width: 140px;
+//       height: 146px;
+//     }
+//     h1 {
+//       margin-top: 50px;
+//       @include flexBox(center, center);
+//     }
+//     p {
+//       margin-top: 10px;
+//       padding-bottom: 30px;
+//       @include flexBox(center, center);
+//     }
+
+//     .inputs_log {
+//       @include flexBox(center, center);
+//       flex-direction: column;
+//       .input_log {
+//         width: 300px;
+//         height: 30px;
+//         margin-bottom: 20px;
+//         //   padding: 15px;
+//         //   border: none;
+//         //   background-color: rgba(3, 26, 58, 0.847);
+//         //   border-bottom: 1px solid gray;
+
+//         #name,
+//         #email,
+//         #password {
+//           width: 400px;
+//           height: 30px;
+//           border: 1px solid #cacaca;
+//           box-shadow: 2px 4px 6px rgba(79, 79, 79, 0.15);
+//           border-radius: 2px;
+//         }
+//       }
+//     }
+
+//     // .checkbox {
+//     //   @include flexBox(center, center);
+//     //   width: 400px;
+//     //   margin-left: 280px;
+
+//     //   .checkbtn {
+//     //     // @include flexBox(center, center);
+//     //     p {
+//     //       color: rgb(95, 94, 94);
+//     //       font-size: 14px;
+//     //       padding-left: 10px;
+//     //     }
+//     //   }
+//     // }
+
+//     .info_btn_log {
+//       @include flexBox(center, center);
+//       margin-top: 20px;
+//       // margin-left: 200px;
+//       #send {
+//         padding: 10px 220px;
+//         background-color: #03a9f4;
+//         color: white;
+//         font-size: 16px;
+//         font-weight: 400;
+//         border-radius: 50px;
+//         transition: 0.3s ease-in;
+//         cursor: pointer;
+
+//         &:hover {
+//           background: none;
+//           border: 2px solid #03a9f4;
+//           color: #03a9f4;
+//         }
+//       }
+//     }
+
+//     .bottom_img {
+//       // position: absolute;
+//       margin-right: 700px;
+//       margin-top: 200px;
+//       width: 140px;
+//       height: 146px;
+//     }
+//   }
+
+// }
